@@ -9,9 +9,12 @@ public class PropertyOwner {
         listOfProperties.add(new Property(propertyID, description, propertyOwnerId));
     }
 
-    public void removeProperty(){
+    public void removeProperty(String propertyID){
         for(int i =0; i<this.listOfProperties.size(); i++){
-            if(listOfProperties.get(i).getPropertyID().equals(propertyID))
+            if(listOfProperties.get(i).getPropertyID().equals(propertyID)){
+                this.listOfProperties.remove(i);
+                break;
+            }
         }
     }
 }
